@@ -9,7 +9,7 @@ aws_s3 as s3
 from constructs import Construct
 
 class Resource_Stack(Stack):
-    def __inti__(self, scope: Construct, construct_id:str, **kwargs) -> None:
+    def __init__(self, scope: Construct, construct_id:str, **kwargs) -> None:
         super().__init__(scope,construct_id,**kwargs)
         queue =sqs.Queue(
             self, "AWSCDKCodeDemoQueue",
